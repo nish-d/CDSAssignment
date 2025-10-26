@@ -1,4 +1,5 @@
 # Getting Started
+# http://161.118.208.245:8080/quote
 
 ### Reference Documentation
 For further reference, please consider the following sections:
@@ -24,3 +25,18 @@ These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 
+### Additional Commands
+* ssh -i "/Users/nishita/IdeaProjects/CDSAssignment/workshop01/ssh-key-2025-10-26.key" opc@161.118.208.245
+
+* sudo firewall-cmd --list-all
+* sudo firewall-cmd --add-port=8080/tcp --permanent
+* sudo firewall-cmd --reload
+
+#### To check if your application is running 
+* sudo netstat -tulnp | grep 8080
+* ping 161.118.208.245
+
+#### OCP Commands
+* ssh -i "/Users/nishita/IdeaProjects/CDSAssignment/workshop01/ssh-key-2025-10-26.key" opc@161.118.208.245
+
+* scp -i "/Users/nishita/IdeaProjects/CDSAssignment/workshop01/ssh-key-2025-10-26.key" "/Users/nishita/IdeaProjects/CDSAssignment/workshop01/api/build/libs/workshop-0.0.1-SNAPSHOT.jar" opc@161.118.208.245:/home/opc/
